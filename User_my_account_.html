@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <title>TECHINNOV-USTHB</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">TECHINNOV-USTHB</a>
+
+        <i class='bx bx-menu-alt-left' id="menu-icon"></i> 
+
+        <nav class="navbar" id="navbarid">
+            <a href="user_account.html">Home</a>
+            <a href="#"class="active">My Account</a>
+            <a href="User_MYproject.html">MY Project</a>
+            <a class="btn delete" id="logoutBtn"> Logout </a>
+        </nav>
+    </header>
+
+    <section class="home" id="home_user_login_succes" style="display: none;">
+ 
+
+        <div class="home-content_user_home">
+            <div class="name_daete_statu">
+                <div class="tire">
+                    <h1>TECHINNOV-USTHB</h1>
+                    <h2>Welcome, to your <span>TECHINNOV</span> account</h2>
+                </div>
+
+                <div class="my_ID_btn">
+                    <a href="User_ID_cart.html" class="btn nav">id card</a>
+                </div>
+
+            </div>
+            
+            <div class="content_statu">
+                <div class="cs-loader-inner" id="loader" style="display: block;">
+                    <label>	●</label>
+                    <label>	●</label>
+                    <label>	●</label>
+                    <label>	●</label>
+                </div>
+
+                <h3 id="userInfoDisplay"></h3>
+     
+
+                <h2 style="color: rgb(255, 120, 120); margin: 10px;">If you notice any inaccuracies in the information, please reach out to us. We are located at USTHB, Technology Hall.</h2>
+            </div>
+        </div>
+
+
+        <div class="home-content_user_home">
+            <div class="name_daete_statu">
+                <div class="tire">
+                    <h1>Account ID</h1>
+                </div>
+
+                <h3 id="copiedtext" style="width: 100%;display: none;"><span>ID copied</span></h3>
+
+                <div class="my_ID_btn">
+                    <a href="#" id="copyButton" class="btn nav">Copy</a>
+                </div>
+
+            </div>
+
+            <div class="content_statu">
+                <h3>Sher, Share My Account ID with My Team for Creating a Project</h3>
+                <h3 id="userId_code_for_copy"></h3>
+                <div class="cs-loader-inner" id="loaderIDcopy" style="display: none;">
+                    <label>	●</label>
+                    <label>	●</label>
+                    <label>	●</label>
+                    <label>	●</label>
+                </div>
+
+
+            </div>
+
+            
+
+        </div>
+
+    </section>
+
+
+    <section class="home" id="home_user_login_filed" style="display: none;">
+        <div class="home-content_user_home">
+            <div class="content_statu">
+                <h3>Error: User Not Connected</h1>
+
+                <h3>
+                  We're sorry, but it seems like you are not connected. Please log in to access this page.  <a href="login.html"><span>login</span></a>
+                </h3>
+    
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="home" id="loaderSection" style="display: flex;">
+        <div class="cs-loader-inner" id="loader" style="display: block;">
+            <label style="color: rgb(38, 255, 0);">	●</label>
+            <label style="color: rgb(38, 255, 0);">	●</label>
+            <label style="color: rgb(38, 255, 0);">	●</label>
+            <label style="color: rgb(38, 255, 0);">	●</label>
+        </div>
+    </section>
+
+    
+
+    
+
+
+    <script type="module" src="User_my_account_.js"> </script>
+
+    
+</body>
+</html>

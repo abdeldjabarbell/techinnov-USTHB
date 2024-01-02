@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a class="logo">MY-ID</a>
+    </header>
+
+    <main class="bg" id="app" style="display: none;">
+
+
+
+        <section class="ticket">
+    
+            <header class="front">
+                <div class="holo"></div>
+                <img class="logo" src="https://image-parcours.copainsdavant.com/image/750/1122508433/4180179.png" alt="The logo for the Application called Threads, an instagram App. It's a '@' symbol but with the tail going in the opposite direction.">
+                <aside class="divider"></aside>
+            </header>
+    
+            <section class="back">
+                <div class="holo"></div>
+                <img class="logo" src="https://image-parcours.copainsdavant.com/image/750/1122508433/4180179.png" alt="The logo for the Application called Threads, an instagram App. It's a '@' symbol but with the tail going in the opposite direction.">
+                <div class="data">
+                    <h3 style="width: 70%;">The University of Science and Technology – Houari Boumediene</h3>
+                    <p contenteditable spellcheck=false>TECHINNOV-USTHB</p>
+                    <div class="cs-loader-inner" id="loader" style="display: block;">
+                        <label>	●</label>
+                        <label>	●</label>
+                        <label>	●</label>
+                        <label>	●</label>
+                    </div>
+                    <h3 id="userInfoDisplay"contenteditable spellcheck=false></h3>
+
+
+
+                </div>
+    
+                <aside class="divider">
+                    <div class="username">
+                        <img class="profile" src="https://scontent.fogx1-1.fna.fbcdn.net/v/t39.30808-6/359810984_1412290096221492_8475344941786328890_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeHtOzm_g_q9aJIFFNcASI4EAa_f41wXE0kBr9_jXBcTSWHfS5tfdOGAb24mFTkPNGD5u6KeS6mCSkaxFbhyJm_1&_nc_ohc=lim2KnDaUlYAX_Cvm-b&_nc_ht=scontent.fogx1-1.fna&oh=00_AfAuighEgwt_DdKrGnh1ef4YN60-HMpSRQ849fFhSJXJUA&oe=658CCBB5">
+                        <span contenteditable spellcheck=false>BELLAKHDAR ABDELDJDABR</span> <img class="verified" src="https://assets.codepen.io/13471/verified.png">
+                    </div>
+                    <span class="usernum" contenteditable spellcheck=false>181839085001</span>
+                </aside>
+            </section>
+    
+        </section>
+    
+    </main>
+
+    <section class="information_user" id="information_user" style="display: none;">
+        <a class="btn nav" href="User_my_account_.html" title="return to my account">return<a>
+    </section>
+
+    <section class="home" id="home_user_login_filed"style="display: none;">
+        <div class="home-content_user_home">
+            <div class="content_statu">
+                <h3 style="color: red;">Error: User Not Connected</h1>
+
+                <h3 style="color: red;">
+                  We're sorry, but it seems like you are not connected. Please log in to access this page.  <a href="login.html"><span style="color: rgb(255, 196, 196);">login</span></a>
+                </h3>
+    
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="home" id="loaderSection" style="display: block;">
+        <div class="cs-loader-inner" id="loader" style="display: block;">
+            <label style="color: rgb(38, 255, 0);">	●</label>
+            <label style="color: rgb(38, 255, 0);">	●</label>
+            <label style="color: rgb(38, 255, 0);">	●</label>
+            <label style="color: rgb(38, 255, 0);">	●</label>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+<style>
+
+    :root {
+    --bg: #111316;
+    --logo: url(https://image-parcours.copainsdavant.com/image/750/1122508433/4180179.png);
+    --logopng: url(https://image-parcours.copainsdavant.com/image/750/1122508433/4180179.png);
+    --ticket: url(https://assets.codepen.io/13471/ticket-shape.svg);
+    --ar: 20/30;
+    --gutter: 8%;
+}
+
+.btn.nav {
+    display: inline-block;
+    padding: 0.9rem 1.6rem;
+    background: rgb(38, 255, 0);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem rgb(162, 255, 125);
+    font-size: 1.2rem;
+    font-family: bold;
+    color: #3c4a3b;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+}
+
+.btn.nav:hover{
+    box-shadow: none;
+    background: #3c4a3b;
+    color: rgb(38, 255, 0);
+
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: #262e26;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, 2);
+}
+.logo{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+    transition: .5s;
+}
+.logo:hover{
+    color: var(--main-color);
+    
+}
+.navbar a{
+font-size: 1.7rem;
+color: var(--text-color);
+margin-left: 4rem;
+transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+
+#menu-icon{
+     font-size: 3.6rem;
+     color: var(--text-color);
+     display: none;
+}
+
+
+#app {
+    perspective: 1200px;
+    --o: 0;
+    --p: 100%;
+    --h: 50%;
+    --r: 0;
+    transform: translate3d(0, 0, 0.1px);
+}
+
+.ticket {
+    --scale: 0.8;
+    transform: translate3d(0, 0, 0.1px) scale(var(--scale)) rotateY(var(--r));
+    transform-style: preserve-3d;
+    pointer-events: auto;
+}
+
+.front,
+.back {
+    grid-area: 1/1;
+    background-color: #6e6176;
+    background-image: radial-gradient(
+        circle at var(--p) 50%,
+        #fff 10%,
+        transparent 100%
+    );
+    background-size: 100% 220vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    display: grid;
+    backface-visibility: visible;
+    transform: translateZ(1px);
+    transform-style: preserve-3d;
+    mask-image: var(--ticket);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+.cutout {
+    position: absolute;
+}
+
+.front::after,
+.back::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+        -70deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.5) 40.5%,
+        transparent
+    );
+    background-size: 200% 200%;
+    background-position: var(--p) var(--p);
+    z-index: 5;
+    opacity: calc(var(--o) + 0.5);
+    pointer-events: none;
+}
+
+.front {
+    transform: rotateY(180deg) translateZ(1px);
+}
+
+.holo {
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+}
+
+.holo {
+    --space: 5%;
+    --red: hsl(0, 100%, 50%);
+    --orange: hsl(30, 100%, 50%);
+    --yellow: hsl(60, 100%, 50%);
+    --green: hsl(120, 100%, 50%);
+    --cyan: hsl(180, 100%, 50%);
+    --blue: hsl(222, 100%, 50%);
+    --purple: hsl(258, 100%, 50%);
+    --magenta: hsl(300, 100%, 50%);
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--red) 0%,
+        var(--orange) calc(var(--space) * 1),
+        var(--yellow) calc(var(--space) * 2),
+        var(--green) calc(var(--space) * 3),
+        var(--cyan) calc(var(--space) * 4),
+        var(--blue) calc(var(--space) * 5),
+        var(--purple) calc(var(--space) * 6),
+        var(--magenta) calc(var(--space) * 7),
+        var(--red) calc(var(--space) * 8)
+    );
+    background-size: 150vw 150vh;
+    background-position: calc(var(--h)) calc(var(--h));
+    background-repeat: no-repeat;
+    mask-image: var(--logopng);
+    mask-size: 4% 4%;
+    mask-repeat: repeat;
+    mix-blend-mode: plus-lighter;
+    filter: brightness(0.9) contrast(0.7) saturate(2);
+    opacity: var(--o);
+}
+
+.logo,
+.data {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 50%;
+    place-self: center;
+    transform: translateY(-14%);
+}
+
+.back .logo {
+    position: absolute;
+    right: var(--gutter);
+    top: 13%;
+    width: 16%;
+    image-rendering: optimize-speed;
+    image-rendering: crisp-edges;
+}
+
+.data {
+    margin: 14% var(--gutter);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0.2em 0;
+}
+
+p {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0.2em 0 1em;
+}
+
+[contenteditable] {
+    outline: none;
+}
+[contenteditable]:focus {
+    background: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.qr {
+    max-width: 30%;
+    display: block;
+    image-rendering: optimize-speed;
+    image-rendering: crisp-edges;
+}
+
+.divider {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    height: 18%;
+    padding: 0 var(--gutter);
+
+    background-image: repeating-linear-gradient(
+            90deg,
+            #fff0 0px,
+            #fff0 8px,
+            #0005 8px,
+            #0005 16px
+        ),
+        radial-gradient(ellipse at center center, #fff0 10%, transparent 50%);
+    background-size: 100% 1.5px, 250% 1.5px;
+    background-repeat: no-repeat;
+    background-position: -4px top, var(--h) top;
+    background-blend-mode: overlay;
+
+    font-size: 16px;
+    font-weight: 400;
+    z-index: 2;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    font-family: heebo;
+    font-weight: 600;
+}
+
+.profile {
+    border-radius: 100%;
+    width: 40px;
+    box-shadow: 0 0 0 1.33px black;
+    margin-right: 10px;
+    image-rendering: optimize-speed;
+    image-rendering: crisp-edges;
+}
+
+.verified {
+    width: 18px;
+    margin-left: 5px;
+}
+.usernum {
+    font-size: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: "Roboto Mono", monospace;
+    position: fixed;
+    top: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #262e26;
+}
+
+#app {
+    color: black;
+    font-family: "Roboto Mono", monospace;
+
+    display: grid;
+    grid: 1fr/1fr;
+    place-content: center;
+    overflow: hidden;
+    padding: 50px;
+    z-index: 999;
+}
+
+.ticket {
+    display: grid;
+    grid-area: 1/1;
+    width: 400px;
+    aspect-ratio: var(--ar);
+}
+
+
+    
+.cs-loader-inner {
+        position: relative;
+        width: 100%;
+        color: var(--main-color);
+        padding: 0;
+        text-align: center;
+      }
+      
+      .cs-loader-inner label {
+        font-size: 16px;
+        opacity: 0;
+        display:inline-block;
+      }
+      
+      @keyframes lol {
+        0% {
+          opacity: 0;
+          transform: translateX(-65px);
+        }
+        33% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        66% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(65px);
+        }
+      }
+      
+      @-webkit-keyframes lol {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateX(-100px);
+        }
+        33% {
+          opacity: 1;
+          -webkit-transform: translateX(0px);
+        }
+        66% {
+          opacity: 1;
+          -webkit-transform: translateX(0px);
+        }
+        100% {
+          opacity: 0;
+          -webkit-transform: translateX(100px);
+        }
+      }
+      
+      .cs-loader-inner label:nth-child(6) {
+        -webkit-animation: lol 1.5s infinite ease-in-out;
+        animation: lol 1.5s infinite ease-in-out;
+      }
+      
+      .cs-loader-inner label:nth-child(5) {
+        -webkit-animation: lol 1.5s 100ms infinite ease-in-out;
+        animation: lol 1.5s 100ms infinite ease-in-out;
+      }
+      
+      .cs-loader-inner label:nth-child(4) {
+        -webkit-animation: lol 1.5s 200ms infinite ease-in-out;
+        animation: lol 1.5s 200ms infinite ease-in-out;
+      }
+      
+      .cs-loader-inner label:nth-child(3) {
+        -webkit-animation: lol 1.5s 300ms infinite ease-in-out;
+        animation: lol 1.5s 300ms infinite ease-in-out;
+      }
+      
+      .cs-loader-inner label:nth-child(2) {
+        -webkit-animation: lol 1.5s 400ms infinite ease-in-out;
+        animation: lol 1.5s 400ms infinite ease-in-out;
+      }
+      
+      .cs-loader-inner label:nth-child(1) {
+        -webkit-animation: lol 1.5s 500ms infinite ease-in-out;
+        animation: lol 1.5s 500ms infinite ease-in-out;
+      } 
+
+
+
+
+
+
+
+@media (max-width:1200px){
+    .ticket {
+        --scale: 0.6;
+    transform: translate3d(0, 0, 0.1px) scale(var(--scale)) rotateY(var(--r));
+    transform-style: preserve-3d;
+    pointer-events: auto;
+    }
+    main{
+    height: 70vh;
+    overflow: hidden;
+    }
+    body,
+html {
+    flex-direction: column;
+
+}
+
+.information_user{
+    margin-top: 10px;
+}
+
+
+
+
+}
+
+</style>
+
+
+<script type="module" src="User_ID_cart.js"> </script>
+
+<script>
+    const speed = 4.5;
+const r = gsap.timeline({ repeat: -1 });
+const o = gsap.timeline({ repeat: -1 });
+const h = gsap.timeline({ repeat: -1 });
+
+r.to("#app", {
+    "--r": "180deg",
+    "--p": "0%",
+    duration: speed,
+    ease: "sine.in"
+});
+r.to("#app", {
+    "--r": "360deg",
+    "--p": "100%",
+    duration: speed,
+    ease: "sine.out"
+});
+o.to("#app", {
+    "--o": 1,
+    duration: speed/2,
+    ease: "power1.in"
+});
+o.to("#app", {
+    "--o": 0,
+    duration: speed/2,
+    ease: "power1.out"
+});
+
+h.to("#app", {
+    "--h": "100%",
+    duration: speed/2,
+    ease: "sine.in"
+});
+h.to("#app", {
+    "--h": "50%",
+    duration: speed/2,
+    ease: "sine.out"
+});
+h.to("#app", {
+    "--h": "0%",
+    duration: speed/2,
+    ease: "sine.in"
+});
+h.to("#app", {
+    "--h": "50%",
+    duration: speed/2,
+    ease: "sine.out"
+});
+
+</script>
+    
+</body>
+</html>

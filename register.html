@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    
+    <title>register-USTHB</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">TECHINNOV-USTHB</a>
+
+        <i class='bx bx-menu-alt-left' id="menu-icon"></i> 
+
+        <nav class="navbar" id="navbarid">
+
+            <a href="index.html" class="btn nav" id="return_joinUsButton"> return </a>
+
+
+        </nav>
+    </header>
+
+    <section class="bg" id="home">
+
+
+
+        <div class="login_register">
+
+            <div class="register">
+                <form  id="register-form" >
+                    <h1>Join <span>Us</span> </h1><br><br>
+
+                    <div class="Data-Form">
+                        <div class="interData">
+                            <p>Personal Information</p>
+    
+                            <div class="input-box">
+                                
+                                <input type="text" id="Name" placeholder="Name" required>
+        
+                                <input type="text" id="LastName" placeholder="Last Name" required>
+                                
+                                <input type="date" id="Birthday" placeholder="Birthday" required>
+                                
+                                <select name="Wilaya" id="Wilaya" aria-selected="true">        
+                                    <option value="Adrar">1 Adrar</option>
+                                    <option value="Chlef">2 Chlef</option>
+                                    <option value="Laghouat">3 Laghouat</option>
+                                    <option value="Oum El Bouaghi">4 Oum El Bouaghi</option>
+                                    <option value="Batna">5 Batna</option>
+                                    <option value="Béjaïa">6 Béjaïa</option>
+                                    <option value="Biskra">7 Biskra</option>
+                                    <option value="Béchar">8 Béchar</option>
+                                    <option value="Blida">9 Blida</option>
+                                    <option value="Bouira">10 Bouira</option>
+                                    <option value="Tamanrasset">11 Tamanrasset</option>
+                                    <option value="Tébessa">12 Tébessa</option>
+                                    <option value="Tlemcen">13 Tlemcen</option>
+                                    <option value="Tiaret">14 Tiaret</option>
+                                    <option value="Tizi Ouzou">15 Tizi Ouzou</option>
+                                    <option value="Alger"selected>16 Alger</option>
+                                    <option value="Djelfa">17 Djelfa</option>
+                                    <option value="Jijel">18 Jijel</option>
+                                    <option value="Sétif">19 Sétif</option>
+                                    <option value="Saïda">20 Saïda</option>
+                                    <option value="Skikda">21 Skikda</option>
+                                    <option value="Sidi Bel Abbès">22 Sidi Bel Abbès</option>
+                                    <option value="Annaba">23 Annaba</option>
+                                    <option value="Guelma">24 Guelma</option>
+                                    <option value="Constantine">25 Constantine</option>
+                                    <option value="Médéa">26 Médéa</option>
+                                    <option value="Mostaganem">27 Mostaganem</option>
+                                    <option value="M'Sila">28 M'Sila</option>
+                                    <option value="Mascara">29 Mascara</option>
+                                    <option value="Ouargla">30 Ouargla</option>
+                                    <option value="Oran">31 Oran</option>
+                                    <option value="El Bayadh">32 El Bayadh</option>
+                                    <option value="Illizi">33 Illizi</option>
+                                    <option value="Bordj Bou Arréridj">34 Bordj Bou Arréridj</option>
+                                    <option value="Boumerdès">35 Boumerdès</option>
+                                    <option value="El Tarf">36 El Tarf</option>
+                                    <option value="Tindouf">37 Tindouf</option>
+                                    <option value="Tissemsilt">38 Tissemsilt</option>
+                                    <option value="El Oued">39 El Oued</option>
+                                    <option value="Khenchela">40 Khenchela</option>
+                                    <option value="Souk Ahras">41 Souk Ahras</option>
+                                    <option value="Tipaza">42 Tipaza</option>
+                                    <option value="Mila">43 Mila</option>
+                                    <option value="Aïn Defla">44 Aïn Defla</option>
+                                    <option value="Naâma">45 Naâma</option>
+                                    <option value="Aïn Témouchent">46 Aïn Témouchent</option>
+                                    <option value="Ghardaïa">47 Ghardaïa</option>
+                                    <option value="Relizane">48 Relizane</option>
+                                </select>
+                                
+                                <input type="number" id="phoneNumber" placeholder="Phone Number" required>
+                                
+                            </div>
+                            <p>Other Information</p>
+        
+                            <div class="input-box">
+                                <select name="faculte" id="faculte" aria-selected="true">        
+                                    <option value="MECHANICAL ENGINEERING">MECHANICAL ENGINEERING</option>
+                                    <option value="PROCESS ENGINEERING">PROCESS ENGINEERING</option>                                    
+                                    <option value="GEOLOGY">GEOLOGY</option>
+                                    <option value="ELECTRICAL ENGINEERING">ELECTRICAL ENGINEERING</option>
+                                    <option value="INFORMATICS">INFORMATICS</option>
+                                    <option value="CIVIL ENGINEERING">CIVIL ENGINEERING</option>
+                                    <option value="PHYSICS">PHYSICS</option>
+                                    <option value="CHEMISTRY">CHEMISTRY</option>
+                                    <option value="BIOLOGY">BIOLOGY</option>
+                                    <option value="MATHEMATICS">MATHEMATICS</option>                                    
+                                </select>
+
+                                <select name="lavel" id="lavel" aria-selected="true">        
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2" selected>M2</option>
+                                    <option value="Doctor">Doctor</option>
+                                    <option value="Professor">Professor</option>
+
+                                </select>
+            
+    
+                            </div>
+                            <p>Account Information</p>
+        
+                            <div class="input-box">
+            
+                                <input type="number" id="matricule" placeholder="Matricule" required>
+        
+                                <input type="email" id="email" placeholder="Email" required>
+                                
+                                <input type="password" id="passwordregister" placeholder="Password" required>
+                                
+                                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                                
+                            </div>
+        
+                            
+                        </div>
+                        <div class="Register_btnnnn">
+                            <p>Do you accept the rules of the contract ? ,<a href="#ruls"><span>Read the rules now</span></a> </p>
+                            <select name="rule" id="rule">
+                                <option value="yes">Yes, I agree</option>
+                                <option value="yes" disabled>no</option>
+
+                            </select>
+                            <button type="submit" value="register" class="btn nav" id="submit_register">
+                                <div class="cs-loader-original" id="original" style="display: block;">
+                                    Register
+                                </div>
+                                <div class="cs-loader-inner" id="loader" style="display: none;">
+                                    <label>	●</label>
+                                    <label>	●</label>
+                                    <label>	●</label>
+                                    <label>	●</label>
+                                </div>
+                                <div class="cs-loader-inner" id="Done" style="display: none;">
+                                    Done
+                                </div>
+
+                            </button>                            
+                            <br><br><br>
+                            <p>I already have an account, <a href="login.html" ><span>Login</span></a></p> <br><br>
+
+                            <p class="errorText" id="messageRegister"></p>
+                            <p class="errorText" id="messageRegister1"></p>
+                            <p class="errorText" id="messageRegister2"></p>
+                            <p class="errorText" id="messageRegister3"></p>
+                            <p class="errorTextSuccfully" id="messageRegister4"></p>
+
+
+
+
+        
+                        </div>
+
+                    </div>
+
+                </form >
+
+
+    
+            </div>
+    
+
+        </div>
+
+    </section>
+
+    <section class="ruls" id="ruls">
+        <h1>TECHINNOV INCUBATOR <span>RULES</span> </h1><br>
+        <p>As of my last training data in January 2022, I don't have specific details on the rules of Instagram. However, I can provide a general idea of the types of rules and guidelines commonly found on social media platforms. Keep in mind that these details might have changed, and it's essential to refer to the latest terms and policies on Instagram's official website.
+
+            Here's a general example of rules that might be found on a social media platform like Instagram:
+            <br>
+            
+            1. **Community Guidelines:** Users are expected to adhere to community guidelines that promote a safe, respectful, and inclusive environment.
+            
+            <br>
+            2. **Content Restrictions:** Rules regarding the types of content that are not allowed, such as hate speech, violence, or graphic content.
+            <br>
+            
+            3. **Intellectual Property:** Users are expected to respect intellectual property rights, including copyrights and trademarks.
+            <br>
+            
+            4. **Privacy Policies:** Guidelines on respecting the privacy of others, including not sharing personal information without consent.
+            <br>
+            
+            5. **Spam and Fake Accounts:** Policies against spamming, creating fake accounts, or engaging in deceptive practices.
+            
+            <br>
+            6. **Age Restrictions:** Users must meet the minimum age requirements to use the platform.
+            <br>
+            Remember, for the most accurate and up-to-date information, refer to Instagram's official terms of use and community guidelines on their website. They regularly update their policies, so it's crucial to stay informed about any changes.</p>
+   
+            <p><a href="#home"><span>I have read the rules.</span></a> </p>
+
+        </section>
+
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy;2024 by abdeldjabar bellakhdar .Right Reserved</p>
+        </div>
+        <div class="footer-iconTop">
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+    <script type="module" src="register.js"></script>
+
+
+    </body>
+
+</html>
+
