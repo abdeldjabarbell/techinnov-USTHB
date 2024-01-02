@@ -1204,7 +1204,10 @@ width: 30vw;
 
 
 @media (max-width:1200px){
-
+    .abouttt{
+         flex-direction: column;
+        
+}
     html{
         font-size: 55%;
     }
