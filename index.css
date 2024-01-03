@@ -1170,6 +1170,28 @@ width: 30vw;
 
 
 
+.account h2{
+  font-size: 3rem;
+
+}
+
+
+.abouttt{
+  display: flex;
+  flex-direction: row;
+}
+.abouttt img{
+
+  width: 30vw;
+  margin-bottom:10vw;
+}
+
+.abouttt p{
+  font-size: 1.2rem;
+}
+
+
+
 
 
 
@@ -1204,10 +1226,19 @@ width: 30vw;
 
 
 @media (max-width:1200px){
-    .abouttt{
-         flex-direction: column;
-        
-}
+ .abouttt{
+    display: flex;
+    flex-direction: column;
+  }
+  .abouttt img{
+
+    width: 80vw;
+    margin-bottom:10vw;
+  }
+
+  .abouttt p{
+    font-size: 1.2rem;
+  }
     html{
         font-size: 55%;
     }
